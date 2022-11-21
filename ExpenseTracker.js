@@ -55,6 +55,7 @@ const ExpenseTracker = () => {
     const del = id =>{
         const deleteItem = transactions.filter(data=> data.id !== id)
         setTransactions(deleteItem)
+        localStorage.setItem('expensetracker',JSON.stringify(deleteItem))
     }
 
   return (
